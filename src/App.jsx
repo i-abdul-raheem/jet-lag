@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Flights, Landing } from "./components";
+import { HowToUse } from "./components/HowToUse/HowToUse";
 
 export default function App() {
   const [showCalender, setShowCalendar] = useState(false);
@@ -19,6 +20,7 @@ export default function App() {
         }
       />
       <Route path="/flights" element={<Flights date={date} />} />
+      <Route path="/how-to-use" element={<HowToUse/>}/>
     </Routes>
   );
 }

@@ -9,8 +9,10 @@ import {
   MainContent,
   Wrapper,
 } from "./elements";
+import {useNavigate } from "react-router-dom";
 
 export const Landing = ({ showCalender, setShowCalendar, setDate, date }) => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <HeadingContainer>JET LAG APPLICATION</HeadingContainer>
@@ -19,7 +21,7 @@ export const Landing = ({ showCalender, setShowCalendar, setDate, date }) => {
           <FlightIcon />
           Add Flight
         </BigCircleButton>
-        <BigCircleButton>
+        <BigCircleButton onClick={() => navigate("/how-to-use")}>
           <QuestionMarkIcon />
           How to use?
         </BigCircleButton>
