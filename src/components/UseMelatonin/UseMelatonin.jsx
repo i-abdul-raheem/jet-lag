@@ -1,5 +1,8 @@
 
 
+
+
+
 import { useEffect, useRef, useState } from "react";
 import { ButtonSection, ChronoButton, PageContainer, StyledText, TopArrow, TopHeading } from "./elements"
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -7,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export const UseCaffeine=({action})=>{
+export const UseMelatonin=({action})=>{
     const pageHeading=useRef(null);
     const [pageHeight,setpageHeight]=useState(0);
     useEffect(()=>{
@@ -23,12 +26,12 @@ export const UseCaffeine=({action})=>{
     return(
         <>
         <PageContainer ref={pageHeading}>
-            <TopArrow onClick={()=> navigate("/your-chronotype")}>
+            <TopArrow onClick={()=> navigate("/use-of-caffeine")}>
                <ArrowBackIosIcon/>
             </TopArrow>
             <TopHeading>
                 <StyledText>
-                 Use caffeine correctly to stay energized and to minimize negative effects on sleep?
+                    Would you like to use melatonin to timeshift faster and sleep better?
                 </StyledText>
             </TopHeading>
 

@@ -40,9 +40,9 @@ export const PageContainer = styled(Box)({
       borderBottom: "1px solid #ddd",
       backgroundColor: "white",
       color: "green",
-      minHeight: `calc((100vh - ${pheight}px)/3)`,
+      minHeight: `calc((100vh - ${pheight}px)/2)`,
       display: "block",
-      fontSize:'5vh',
+      fontSize:"5vh",
       "&:hover":{
         backgroundColor:"whitesmoke"
       }

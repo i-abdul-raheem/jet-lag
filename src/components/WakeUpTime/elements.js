@@ -41,5 +41,9 @@ export const TimeButton = styled("button")(({ pheight }) => {
     color: "green",
     minHeight: `calc((100vh - ${pheight}px)/5)`,
     display: "block",
+    fontSize:'5vh',
+    "&:hover":{
+      backgroundColor:"whitesmoke"
+    }
   };
 });

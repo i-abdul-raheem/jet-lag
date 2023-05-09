@@ -42,6 +42,10 @@ export const PageContainer = styled(Box)({
       color: "green",
       minHeight: `calc((100vh - ${pheight}px)/2)`,
       display: "block",
+      fontSize:'5vh',
+      "&:hover":{
+        backgroundColor:"whitesmoke"
+      }
     };
   });
   
