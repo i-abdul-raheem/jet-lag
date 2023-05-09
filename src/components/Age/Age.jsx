@@ -1,16 +1,10 @@
-
-
-
-
-
 import { useEffect, useRef, useState } from "react";
-import { ButtonSection, ChronoButton, PageContainer, StyledText, TopArrow, TopHeading } from "./elements"
+import { ButtonSection, ChronoButton, InputField, PageContainer, StyledText, TopArrow, TopHeading } from "./elements"
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useNavigate } from "react-router-dom";
 
 
-
-export const UseMelatonin=({action})=>{
+export const Age=({action})=>{
     const pageHeading=useRef(null);
     const [pageHeight,setpageHeight]=useState(0);
     useEffect(()=>{
@@ -20,26 +14,23 @@ export const UseMelatonin=({action})=>{
     const navigate=useNavigate();
     const handleClick=(answer)=>{
         action(answer);
-        navigate("/your-age")
+        navigate("/use-of-melatonin")
 
     }
     return(
         <>
         <PageContainer ref={pageHeading}>
             <TopArrow>
-               <ArrowBackIosIcon onClick={()=> navigate("/use-of-caffeine")}/>
+               <ArrowBackIosIcon onClick={()=> navigate("/wakeup-time")}/>
             </TopArrow>
             <TopHeading>
                 <StyledText>
-                    Would you like to use melatonin to timeshift faster and sleep better?
+                 What is your Age?
                 </StyledText>
             </TopHeading>
 
         </PageContainer>
-        <ButtonSection pheight={pageHeight}>
-            <ChronoButton  onClick={() => handleClick("Yes, please")} pheight={pageHeight}>Yes, please</ChronoButton>
-            <ChronoButton  onClick={() => handleClick("No, thanks")} pheight={pageHeight} style={{color:"red"}}>No, thanks</ChronoButton>
-        </ButtonSection>
+        <InputField type="number" name="" id="" placeholder="Your Age"/>
+        
         </>
-    )
-}
+    )}

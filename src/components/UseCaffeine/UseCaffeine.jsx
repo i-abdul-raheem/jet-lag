@@ -23,8 +23,8 @@ export const UseCaffeine=({action})=>{
     return(
         <>
         <PageContainer ref={pageHeading}>
-            <TopArrow onClick={()=> navigate("/your-chronotype")}>
-               <ArrowBackIosIcon/>
+            <TopArrow>
+               <ArrowBackIosIcon onClick={()=> navigate("/your-chronotype")}/>
             </TopArrow>
             <TopHeading>
                 <StyledText>

@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Chronotype, FallAsleep, Flights, Landing, UseCaffeine } from "./components";
+import {
+  Age,
+  Chronotype,
+  FallAsleep,
+  Flights,
+  Landing,
+  UseCaffeine,
+} from "./components";
 import { HowToUse } from "./components/HowToUse/HowToUse";
 import { WakeUpTime } from "./components/WakeUpTime/WakeUpTime";
 import { UseMelatonin } from "./components/UseMelatonin";
@@ -9,10 +16,11 @@ export default function App() {
   const [showCalender, setShowCalendar] = useState(false);
   const [date, setDate] = useState(null);
   const [sleepTime, setSleepTime] = useState(null);
-  const [wakeupTime, setwakeupTime]=useState(null);
-  const[yourChronotype, setyourChronotype]=useState(null);
-  const[useCaffeine, setuseCaffeine]=useState(null);
-  const[useMelatonin, setuseMelatonin]=useState(null);
+  const [wakeupTime, setwakeupTime] = useState(null);
+  const [yourChronotype, setyourChronotype] = useState(null);
+  const [useCaffeine, setuseCaffeine] = useState(null);
+  const [useMelatonin, setuseMelatonin] = useState(null);
+  const [getAge, setgetAge] = useState(null);
   return (
     <Routes>
       <Route
@@ -32,11 +40,23 @@ export default function App() {
         path="/fall-asleep-time"
         element={<FallAsleep action={setSleepTime} />}
       />
-      <Route path="/wakeup-time" element={<WakeUpTime action={setwakeupTime}/>}/>
-      <Route path="/your-chronotype" element={<Chronotype action={setyourChronotype}/>}/>
-      <Route path="/use-of-caffeine" element={<UseCaffeine action={setuseCaffeine}/>}/>
-      <Route path="/use-of-melatonin" element={<UseMelatonin action={setuseMelatonin}/>}/>
-      
+      <Route
+        path="/wakeup-time"
+        element={<WakeUpTime action={setwakeupTime} />}
+      />
+      <Route
+        path="/your-chronotype"
+        element={<Chronotype action={setyourChronotype} />}
+      />
+      <Route
+        path="/use-of-caffeine"
+        element={<UseCaffeine action={setuseCaffeine} />}
+      />
+      <Route
+        path="/use-of-melatonin"
+        element={<UseMelatonin action={setuseMelatonin} />}
+      />
+      <Route path="/your-age" element={<Age action={setgetAge} />} />
     </Routes>
   );
 }

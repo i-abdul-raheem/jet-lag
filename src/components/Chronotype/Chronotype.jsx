@@ -21,8 +21,8 @@ export const Chronotype=({action})=>{
     return(
         <>
         <PageContainer ref={pageHeading}>
-            <TopArrow onClick={()=> navigate("/wakeup-time")}>
-               <ArrowBackIosIcon/>
+            <TopArrow>
+               <ArrowBackIosIcon onClick={()=> navigate("/wakeup-time")}/>
             </TopArrow>
             <TopHeading>
                 <StyledText>

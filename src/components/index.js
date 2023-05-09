@@ -4,3 +4,4 @@ export * from "./Flights";
 export * from "./FallAsleep";
 export * from "./Chronotype";
 export * from "./UseCaffeine";
+export * from "./Age";

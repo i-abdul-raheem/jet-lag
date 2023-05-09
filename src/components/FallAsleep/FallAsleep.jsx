@@ -24,8 +24,8 @@ export const FallAsleep = ({ action }) => {
   return (
     <>
       <PageContainer ref={pageHeading}>
-        <TopArrow onClick={()=> navigate("/flights")}>
-          <ArrowBackIosIcon />
+        <TopArrow>
+          <ArrowBackIosIcon onClick={()=> navigate("/flights")}/>
         </TopArrow>
         <TopHeading>
           <StyledText>When do you normally fall asleep?</StyledText>

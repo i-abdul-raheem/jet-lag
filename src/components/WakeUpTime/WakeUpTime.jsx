@@ -26,8 +26,8 @@ export const WakeUpTime = ({ action }) => {
   return (
     <>
       <PageContainer ref={pageHeading}>
-        <TopArrow onClick={()=> navigate("/fall-asleep-time")}>
-          <ArrowBackIosIcon />
+        <TopArrow>
+          <ArrowBackIosIcon  onClick={()=> navigate("/fall-asleep-time")}/>
         </TopArrow>
         <TopHeading>
           <StyledText>When do you normally wake up?</StyledText>
