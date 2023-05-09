@@ -63,7 +63,7 @@ export const Flights = ({ date }) => {
           <ArrowBackIos />
           <span>Back</span>
         </FooterButton>
-        <FooterButton>
+        <FooterButton onClick={()=> navigate("/fall-asleep-time")}>
           <span>Next</span>
           <ArrowForwardIosIcon />
         </FooterButton>

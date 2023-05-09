@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Flights, Landing } from "./components";
+import { Chronotype, FallAsleep, Flights, Landing, UseCaffeine } from "./components";
 import { HowToUse } from "./components/HowToUse/HowToUse";
+import { WakeUpTime } from "./components/WakeUpTime/WakeUpTime";
 
 export default function App() {
   const [showCalender, setShowCalendar] = useState(false);
   const [date, setDate] = useState(null);
+  const [sleepTime, setSleepTime] = useState(null);
+  const [wakeupTime, setwakeupTime]=useState(null);
+  const[yourChronotype, setyourChronotype]=useState(null);
+  const[useCaffeine, setuseCaffeine]=useState(null);
   return (
     <Routes>
       <Route
@@ -20,7 +25,15 @@ export default function App() {
         }
       />
       <Route path="/flights" element={<Flights date={date} />} />
-      <Route path="/how-to-use" element={<HowToUse/>}/>
+      <Route path="/how-to-use" element={<HowToUse />} />
+      <Route
+        path="/fall-asleep-time"
+        element={<FallAsleep action={setSleepTime} />}
+      />
+      <Route path="/wakeup-time" element={<WakeUpTime action={setwakeupTime}/>}/>
+      <Route path="/your-chronotype" element={<Chronotype action={setyourChronotype}/>}/>
+      <Route path="/use-of-caffeine" element={<UseCaffeine action={setuseCaffeine}/>}/>
+      
     </Routes>
   );
 }
