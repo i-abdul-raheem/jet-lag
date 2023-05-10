@@ -36,7 +36,7 @@ export const UseCaffeine = ({ action }) => {
         </CaffeineButton>
         <CaffeineButton
           onClick={() => handleClick("No, thanks")}
-          style={{ color: "red" }}
+          style={{ color: "#B948FF" }}
         >
           No, thanks
         </CaffeineButton>

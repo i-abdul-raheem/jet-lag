@@ -7,11 +7,12 @@ export const TopArrow = styled(Box)({
   position: "absolute",
   top: 0,
   left: 0,
+  color: "#fff",
 });
 
 export const PageContainer = styled(Box)({
   padding: "0 30px",
-  backgroundColor: "whitesmoke",
+  backgroundImage: "linear-gradient(to left, #2A1AD8, #4E26E2, #7231EC, #953DF5, #B948FF)",
   position: "relative",
   height: "50vh",
   display: "flex",
@@ -27,6 +28,7 @@ export const PageContainer = styled(Box)({
   
   export const StyledText = styled(Typography)({
     fontSize: "30px",
+    color: "#fff",
   });
 
   export const InputField = styled("input")({
@@ -39,5 +41,16 @@ export const PageContainer = styled(Box)({
     border:"1px solid #ddd",
     width:"100%",
     height:"40vh",
-    fontSize:"5vh"
+    fontSize:"25vh",
+    backgroundColor:"whitesmoke",
   });
+
+  export const GeneratePlanButton=styled('button')({
+    border: "1px solid #ddd",
+    width: "100%",
+    height: "10vh",
+    position: "relative",
+    padding: "10px",
+    fontSize: "25px",
+    color: "#B948FF"
+  })

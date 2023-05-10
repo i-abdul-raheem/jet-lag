@@ -2,7 +2,6 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import AddIcon from "@mui/icons-material/Add";
 import {
   Footer,
-  FooterButton,
   HeadingContainer,
   Wrapper,
 } from "../Landing/elements";
@@ -11,6 +10,7 @@ import { ArrowBackIos } from "@mui/icons-material";
 import {
   DateBox,
   Dated,
+  FooterButton,
   Main,
   SearchBox,
   SearchContainer,
@@ -59,7 +59,7 @@ export const Flights = ({ date }) => {
         </SearchContainer>
       </Main>
       <Footer>
-        <FooterButton onClick={() => navigate("/")}>
+        <FooterButton onClick={() => navigate("/")} >
           <ArrowBackIos />
           <span>Back</span>
         </FooterButton>

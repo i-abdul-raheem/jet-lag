@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   ButtonSection,
   ChronoButton,
+  GeneratePlanButton,
   InputField,
   PageContainer,
   StyledText,
@@ -33,13 +34,9 @@ export const Age = ({ action }) => {
         </TopHeading>
       </PageContainer>
 
-      <InputField type="number" name="" id="" placeholder="Your Age" />
-      
-        <button
-          style={{border:"1px solid #ddd", width:"100%",height:"10vh", position: "relative", padding: "10px", fontSize: "15px" }}
-        >
-          Generate Plan
-        </button>
+      <InputField type="number" name="" id="" placeholder="0" />
+
+      <GeneratePlanButton>Generate Plan</GeneratePlanButton>
     </>
   );
 };

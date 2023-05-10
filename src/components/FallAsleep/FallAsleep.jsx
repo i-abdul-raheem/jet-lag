@@ -31,7 +31,7 @@ export const FallAsleep = ({ action }) => {
         <TimeButton
           onClick={() => handleClick("before 9pm")}
           
-          style={{ color: "red" }}
+          style={{ color: "#2A1AD8" }}
         >
           Before 9pm
         </TimeButton>
@@ -56,7 +56,7 @@ export const FallAsleep = ({ action }) => {
         <TimeButton
           onClick={() => handleClick("after 2am")}
           
-          style={{ color: "red" }}
+          style={{ color: "#2A1AD8" }}
         >
           After 2am
         </TimeButton>

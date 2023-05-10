@@ -10,19 +10,21 @@ import {
   Wrapper,
 } from "./elements";
 import {useNavigate } from "react-router-dom";
+import { Plane } from "../../assets";
 
 export const Landing = ({ showCalender, setShowCalendar, setDate, date }) => {
   const navigate = useNavigate();
   return (
     <Wrapper>
-      <HeadingContainer>JET LAG APPLICATION</HeadingContainer>
+      <HeadingContainer>JET LAG</HeadingContainer>
       <MainContent>
         <BigCircleButton onClick={() => setShowCalendar(true)}>
-          <FlightIcon />
+          <img src={Plane} alt="asd" style={{width:"100px"}} />
+          {/* <Plane/> */}
           Add Flight
         </BigCircleButton>
         <BigCircleButton onClick={() => navigate("/how-to-use")}>
-          <QuestionMarkIcon />
+          <QuestionMarkIcon/>
           How to use?
         </BigCircleButton>
         <Calender
@@ -39,9 +41,7 @@ export const Landing = ({ showCalender, setShowCalendar, setDate, date }) => {
         <FooterButton>
           <FlightIcon />
         </FooterButton>
-        <FooterButton>
-          <FlightIcon />
-        </FooterButton>
+        
       </Footer>
     </Wrapper>
   );

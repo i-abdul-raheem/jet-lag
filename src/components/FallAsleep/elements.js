@@ -7,11 +7,13 @@ export const TopArrow = styled(Box)({
   position: "absolute",
   top: 0,
   left: 0,
+  color: "#fff",
 });
 
 export const PageContainer = styled(Box)({
   padding: "0 30px",
-  backgroundColor: "whitesmoke",
+  backgroundImage:
+    "linear-gradient(to left, #2A1AD8, #4E26E2, #7231EC, #953DF5, #B948FF)",
   position: "relative",
   height: "50vh",
   display: "flex",
@@ -23,6 +25,7 @@ export const PageContainer = styled(Box)({
 export const TopHeading = styled(Box)({
   padding: "30px",
   textAlign: "center",
+  color: "#fff",
 });
 
 export const StyledText = styled(Typography)({
@@ -42,13 +45,15 @@ export const ButtonSection = styled(Box)({
 export const TimeButton = styled("button")({
   width: "100%",
   padding: "10px",
+  fontSize:"3vh",
   border: "none",
   borderBottom: "1px solid #ddd",
-  backgroundColor: "white",
-  color: "green",
+   
+  backgroundColor:'#fff',
+  color: "#B948FF",
   display: "block",
   height: `${50 / 8}vh`,
   "&:hover": {
-    backgroundColor: "whitesmoke",
+  backgroundColor:'whitesmoke'
   },
 });

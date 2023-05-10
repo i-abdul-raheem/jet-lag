@@ -45,7 +45,7 @@ export const UseMelatonin = ({ action }) => {
         <MelatoninButton
           onClick={() => handleClick("No, thanks")}
           pheight={pageHeight}
-          style={{ color: "red" }}
+          style={{ color: "#B948FF" }}
         >
           No, thanks
         </MelatoninButton>

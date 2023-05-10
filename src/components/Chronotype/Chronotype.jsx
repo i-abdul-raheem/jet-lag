@@ -33,7 +33,7 @@ export const Chronotype=({action})=>{
         </PageContainer>
         <ButtonSection pheight={pageHeight}>
             <ChronoButton  onClick={() => handleClick("Early Bird")} pheight={pageHeight}>Early Bird</ChronoButton>
-            <ChronoButton  onClick={() => handleClick("Night Owl")} pheight={pageHeight}>Night Owl</ChronoButton>
+            <ChronoButton  onClick={() => handleClick("Night Owl")} pheight={pageHeight} sx={{color: "#2A1AD8"}}>Night Owl</ChronoButton>
             <ChronoButton  onClick={() => handleClick("Neither")} pheight={pageHeight}>Neither</ChronoButton>
         </ButtonSection>
         </>

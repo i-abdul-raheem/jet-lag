@@ -2,11 +2,11 @@ import { Button, styled, Box, Typography } from "@mui/material";
 import { useIsMobileView } from "../../utils";
 export const Wrap = styled(Box)({
   backgroundColor: "whitesmoke",
-  display:"flex",
-  alignItems:"center",
-  justifyContent:"space-between",
-  width:"100%",
-  minHeight:"100vh"
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  width: "100%",
+  minHeight: "100vh",
 });
 
 export const ContentContainer = styled(Box)({
@@ -15,15 +15,31 @@ export const ContentContainer = styled(Box)({
   backgroundColor: "whitesmoke",
 });
 
-export const TopArrow = styled(Box)({
-  paddingTop: "30px",
+export const PageContainer = styled(Box)({
+  padding: "0 16px",
+  backgroundImage:
+    "linear-gradient(to left, #2A1AD8, #4E26E2, #7231EC, #953DF5, #B948FF)",
+  position: "relative",
+  height: "15vh",
+  display: "flex",
   width: "100%",
+  justifyContent: "flex-start",
+  overflow: "hidden",
+  alignItems: "center",
+});
+
+export const TopArrow = styled(Box)({
   textAlign: "left",
+  color: "#fff",
 });
 
 export const TopHeading = styled(Box)({
-  fontSize: "30px",
-  padding: "20px 0",
+  padding: "38px",
+  textAlign: "center",
+  color: "#fff",
+  fontSize: "24px",
+  fontWeight: "bold",
+  width: "100%"
 });
 
 export const Review = styled(Box)(() => {
@@ -65,33 +81,32 @@ export const ThreeIconsContainer = styled(Box)({
 
 export const ContentContainer2nd = styled(Box)({});
 
-export const MobileImageFlex = styled(Box)(()=>{
-  const isMobileView=useIsMobileView();
-  return{
-  display: "flex" ,
-  justifyContent:"center",
-  flexDirection:isMobileView? "column":"row"
-  }
+export const MobileImageFlex = styled(Box)(() => {
+  const isMobileView = useIsMobileView();
+  return {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: isMobileView ? "column" : "row",
+  };
 });
 
-export const ImageCardFlex1 = styled(Box)({width:"100%s"});
+export const ImageCardFlex1 = styled(Box)({ width: "100%s" });
 
 export const ImageCardFlex2 = styled(Box)({ width: "100%" });
 
 export const ContentCardFlex1 = styled(Box)({
- display:"flex",
+  display: "flex",
   width: "100%",
   textAlign: "center",
   padding: "50px 40px",
-  alignItems:"center",
-  justifyContent:"center"
+  alignItems: "center",
+  justifyContent: "center",
 });
 
 export const PageLastText = styled(Box)({
   textAlign: "center",
   padding: "50px",
   fontSize: "20px",
-
 });
 
 export const BottomSunImage = styled(Box)({

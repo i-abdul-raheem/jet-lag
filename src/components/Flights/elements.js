@@ -3,7 +3,7 @@ import { Box, styled, Typography } from "@mui/material";
 export const Main = styled(Box)({
   position: "relative",
   width: "100%",
-  height: "calc(100vh - 61px - 59px)",
+  height: "calc(100vh - 101px - 56px)",
   background: "#ddd",
 });
 
@@ -35,7 +35,7 @@ export const SearchContainer = styled(Box)({
   padding: 12,
   flexDirection: "column",
   width: "100%",
-  height: "calc(100vh - 61px - 61px - 57px - 59px)",
+  height: "calc(100vh - 101px - 61px - 57px - 59px)",
   overflow: "hidden",
   overflowY: "scroll",
   rowGap: 10,
@@ -46,11 +46,12 @@ export const SearchBox = styled(Box)({
   alignItems: "flex-start",
   justifyContent: "flex-start",
   flexDirection: "column",
-  backgroundColor: "#fff",
+  backgroundColor: "whitesmoke",
   width: "100%",
   padding: "20px",
   rowGap: 10,
   fontSize: 18,
+  borderRadius: 20,
 });
 
 export const SearchTitle = styled(Typography)({
@@ -80,4 +81,20 @@ export const SearchRow = styled(Box)({
   alignItems: "center",
   justifyContent: "space-between",
   width: "100%",
+});
+
+export const FooterButton = styled("button")({
+  border: "none",
+  padding: "16px 18px",
+  width: "100%",
+  color: "#fff",
+  background: "none",
+  maxHeight: "61px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: 20,
+  columnGap: 20,
+  backgroundColor: "#fff",
+  color: "#B948FF",
 });
