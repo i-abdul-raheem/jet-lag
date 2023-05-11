@@ -12,7 +12,7 @@ import {
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useNavigate } from "react-router-dom";
 
-export const Age = ({ action }) => {
+export const Age = ({ action, age }) => {
   const pageHeading = useRef(null);
   const [pageHeight, setpageHeight] = useState(0);
   useEffect(() => {
@@ -20,23 +20,24 @@ export const Age = ({ action }) => {
   }, [pageHeading]);
   const navigate = useNavigate();
   const handleClick = (answer) => {
-    action(answer);
-    navigate("/use-of-melatonin");
+    if(answer > 0){
+      action(answer);
+    }
   };
   return (
     <>
       <PageContainer ref={pageHeading}>
         <TopArrow>
-          <ArrowBackIosIcon onClick={() => navigate("/wakeup-time")} />
+          <ArrowBackIosIcon onClick={() => navigate("/use-of-melatonin")} />
         </TopArrow>
         <TopHeading>
           <StyledText>What is your Age?</StyledText>
         </TopHeading>
       </PageContainer>
 
-      <InputField type="number" name="" id="" placeholder="0" />
+      <InputField type="number" value={age || 18} onChange={(e) => handleClick(e.target.value)} placeholder="0" />
 
-      <GeneratePlanButton>Generate Plan</GeneratePlanButton>
+      <GeneratePlanButton onClick={()=> navigate("/generate-plan")} >Generate Plan</GeneratePlanButton>
     </>
   );
 };

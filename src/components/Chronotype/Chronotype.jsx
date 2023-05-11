@@ -6,12 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export const Chronotype=({action})=>{
-    const pageHeading=useRef(null);
-    const [pageHeight,setpageHeight]=useState(0);
-    useEffect(()=>{
-        setpageHeight (pageHeading.current.clientHeight)
-
-    },[pageHeading]);
+   
     const navigate=useNavigate();
     const handleClick=(answer)=>{
         action(answer);
@@ -20,7 +15,7 @@ export const Chronotype=({action})=>{
     }
     return(
         <>
-        <PageContainer ref={pageHeading}>
+        <PageContainer >
             <TopArrow>
                <ArrowBackIosIcon onClick={()=> navigate("/wakeup-time")}/>
             </TopArrow>
@@ -31,10 +26,10 @@ export const Chronotype=({action})=>{
             </TopHeading>
 
         </PageContainer>
-        <ButtonSection pheight={pageHeight}>
-            <ChronoButton  onClick={() => handleClick("Early Bird")} pheight={pageHeight}>Early Bird</ChronoButton>
-            <ChronoButton  onClick={() => handleClick("Night Owl")} pheight={pageHeight} sx={{color: "#2A1AD8"}}>Night Owl</ChronoButton>
-            <ChronoButton  onClick={() => handleClick("Neither")} pheight={pageHeight}>Neither</ChronoButton>
+        <ButtonSection>
+            <ChronoButton  onClick={() => handleClick("Early Bird")}>Early Bird</ChronoButton>
+            <ChronoButton  onClick={() => handleClick("Night Owl")} sx={{color: "#2A1AD8"}}>Night Owl</ChronoButton>
+            <ChronoButton  onClick={() => handleClick("Neither")}>Neither</ChronoButton>
         </ButtonSection>
         </>
     )

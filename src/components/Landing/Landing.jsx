@@ -9,40 +9,44 @@ import {
   MainContent,
   Wrapper,
 } from "./elements";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Plane } from "../../assets";
 
-export const Landing = ({ showCalender, setShowCalendar, setDate, date }) => {
+export const Landing = ({ setDate }) => {
   const navigate = useNavigate();
   return (
     <Wrapper>
       <HeadingContainer>JET LAG</HeadingContainer>
       <MainContent>
-        <BigCircleButton onClick={() => setShowCalendar(true)}>
-          <img src={Plane} alt="asd" style={{width:"100px"}} />
+        <input
+          style={{ width: 0, height: 0, border: "none" }}
+          type="date"
+          id="myDate"
+          onChange={(e) => {
+            setDate(e.target.value);
+            navigate("/flights");
+          }}
+        />
+        <BigCircleButton onClick={() => console.log("s")}>
+          <label htmlFor="myDate">
+            <img src={Plane} alt="asd" style={{ width: "100px" }} />
+          </label>
           {/* <Plane/> */}
           Add Flight
         </BigCircleButton>
         <BigCircleButton onClick={() => navigate("/how-to-use")}>
-          <QuestionMarkIcon/>
+          <QuestionMarkIcon />
           How to use?
         </BigCircleButton>
-        <Calender
-          show={showCalender}
-          hide={() => setShowCalendar(false)}
-          setDate={setDate}
-          date={date}
-        />
       </MainContent>
-      <Footer>
+      {/* <Footer>
         <FooterButton>
           <FlightIcon />
         </FooterButton>
         <FooterButton>
           <FlightIcon />
         </FooterButton>
-        
-      </Footer>
+      </Footer> */}
     </Wrapper>
   );
 };

@@ -11,6 +11,7 @@ import {
 import { HowToUse } from "./components/HowToUse/HowToUse";
 import { WakeUpTime } from "./components/WakeUpTime/WakeUpTime";
 import { UseMelatonin } from "./components/UseMelatonin";
+import { GeneratePlan } from "./components/GeneratePlan/GeneratePlan";
 
 export default function App() {
   const [showCalender, setShowCalendar] = useState(false);
@@ -56,7 +57,9 @@ export default function App() {
         path="/use-of-melatonin"
         element={<UseMelatonin action={setuseMelatonin} />}
       />
-      <Route path="/your-age" element={<Age action={setgetAge} />} />
+      <Route path="/your-age" element={<Age action={setgetAge} age={getAge} />} />
+      <Route path="/generate-plan" element={<GeneratePlan/>}/>
+
     </Routes>
   );
 }

@@ -22,7 +22,7 @@ import {
   Wrap,
 } from "./elements";
 import { useNavigate } from "react-router-dom";
-import { Astronaut } from "../../assets";
+import { Astronaut, step1 } from "../../assets";
 
 export const HowToUse = () => {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export const HowToUse = () => {
       <div style={{ height: "85vh", overflow: "auto" }}>
         <ContentContainer>
           <Review>
-            <ReviewTextBox sx={{fontWeight: "bold"}}>
+            <ReviewTextBox sx={{ fontWeight: "bold" }}>
               Ready to eliminate jet lag and boost your energy level on future
               trips?
             </ReviewTextBox>
@@ -67,14 +67,12 @@ export const HowToUse = () => {
               maxime facere obcaecati aspernatur!
               <br />
               <i style={{ fontSize: "12px" }}>
-                Michael | Lopez-Alegria Former NASA astronaut
+                Hassaan | Lopez-Alegria Former NASA astronaut
               </i>
             </ReviewTextBox>
           </Review>
-
-          <TextBox>
             It's as simple as taking small actions at specific times:
-          </TextBox>
+          
           <ThreeIconsContainer>
             <WbSunnyIcon />
             <WbSunnyIcon />

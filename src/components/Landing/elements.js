@@ -32,15 +32,14 @@ export const MainContent = styled(Box)(({ height }) => {
   const isMobileView = useIsMobileView();
   return {
     position: "relative",
-    minHeight: `calc(100vh - 101px - 61px)`,
+    height: `calc(100vh - 101px)`,
     width: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     columnGap: "50px",
-    rowGap: "50px",
+    rowGap: "25px",
     flexDirection: isMobileView ? "column" : "row",
-    padding: 32,
   };
 });
 
@@ -116,7 +115,7 @@ export const FooterButton = styled("button")({
   width: "100%",
   color: "#fff",
   background: "none",
-  maxHeight: "61px",
+  height: "61px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
