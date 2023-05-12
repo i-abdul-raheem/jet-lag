@@ -76,26 +76,26 @@ export const BigCircleButton = styled("button")({
   },
   "@keyframes myEffectImage": {
     "0%": {
-      transform: "scale(1)"
+      transform: "rotate(0deg)"
     },
     "25%": {
-      transform: "scale(1.05)"
+      transform: "rotate(5deg)"
     },
     "50%": {
-      transform: "scale(1.1)"
+      transform: "rotate(0deg)"
     },
     "75%": {
-      transform: "scale(1.05)"
+      transform: "rotate(-5deg)"
     },
     "100%": {
-      transform: "scale(1)"
+      transform: "rotate(0deg)"
     },
   },
   "& > svg": {
     fontSize: 100,
     animation: `myEffect 3000ms infinite`
   },
-  "& > img": {
+  "& img": {
     fontSize: 100,
     animation: `myEffectImage 3000ms infinite`
   }

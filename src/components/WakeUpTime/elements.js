@@ -49,8 +49,8 @@ export const TimeButton = styled("button")({
   backgroundColor: "white",
   color: "#B948FF",
   display: "block",
-  fontSize: "3vh",
-  height: `${50 / 5}vh`,
+  fontSize: "2vh",
+  height: `20vh`,
   "&:hover": {
     backgroundColor: "whitesmoke",
   },

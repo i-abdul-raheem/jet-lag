@@ -27,10 +27,10 @@ export const PageContainer = styled(Box)({
   backgroundImage:
     "linear-gradient(to left, #2A1AD8, #4E26E2, #7231EC, #953DF5, #B948FF)",
   position: "relative",
-  height: "15vh",
+  height: "85px",
   display: "flex",
   width: "100%",
-  justifyContent: "flex-start",
+  justifyContent: "center",
   overflow: "hidden",
   alignItems: "center",
 });
@@ -44,9 +44,12 @@ export const EachTable = styled("table")({
   width: "100%",
   fontSize: 10,
   marginBottom: "20px",
+  // position: "relative",
 });
 
-export const TableHead = styled("thead")({});
+export const TableHead = styled("thead")({
+  zIndex: 100
+});
 export const TableBody = styled("thead")({});
 
 export const OverlayBox = styled(Box)({
@@ -73,7 +76,7 @@ export const OverlayColumns = styled(Box)(
   ({ topL = null, leftL = null, heightL = null }) => {
     return {
       position: "absolute",
-      top: `${topL * 30}px`,
+      top: `${topL * 75}px`,
       left: `${(leftL + 1) * (10 + 45.53)}px`,
       borderRadius: "20px",
       width: "30px",

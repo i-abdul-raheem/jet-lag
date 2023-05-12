@@ -45,7 +45,7 @@ export const ButtonSection = styled(Box)({
 export const TimeButton = styled("button")({
   width: "100%",
   padding: "10px",
-  fontSize:"3vh",
+  fontSize:"10px",
   border: "none",
   borderBottom: "1px solid #ddd",
    

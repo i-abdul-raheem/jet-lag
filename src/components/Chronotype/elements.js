@@ -49,7 +49,7 @@ export const ChronoButton = styled("button")({
   backgroundColor: "white",
   color: "#B948FF",
   display: "block",
-  fontSize:"5vh",
+  fontSize:"3vh",
   height: `${50 / 3}vh`,
   "&:hover": {
     backgroundColor: "whitesmoke",
